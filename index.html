@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="skeleton.css" >
+    <style>
+        h1{
+            font-size: 1.5em;
+            text-align: left;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        ul li{
+            list-style: none;
+        }
+        .container{
+            background: #f4f4f4;
+            margin-top: 100px;
+            border-radius: 20px;
+            overflow: hidden;
+            -webkit-box-shadow: 0 0 22px 5px #777;
+            -moz-box-shadow: 0 0 22px 5px #777;
+            box-shadow: 0 0 22px 5px #777;
+        }
+        button {
+            color: #fff;
+            background: #333;
+        }
+        #total{
+            text-align: right;
+        }
+        .holder {
+            padding: 20px;
+            background: #1e8caf;
+        }
+        .row.header1 {
+            padding: 20px 20px 0;
+            background: #333;
+        }
+        .white{
+            background: #fff;
+            color: #000;
+        }
+        .button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus{
+            color: #fff;
+        }
+        .white:hover{
+            color: #000;
+        }
+        @media only screen and (max-width: 550px){
+            .column, .columns {
+                width: 25%;
+            }
+            .button, button, input[type="submit"], input[type="reset"], input[type="button"]{
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                margin-top: 10px;
+            }
+            h1{
+                font-size: 2em;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row header1">
+            <h1>Calculator </h1>
+            <form action="" id="cal-form">
+                <div>
+                    <input type="text" id="total" class="u-full-width" placeholder="0" autofocus onkeypress="return NumNum(event)">
+                </div>
+            </form>
+        </div>
+        <div class="holder">
+            <div class="row">
+                <div class="three columns"><button class="u-full-width" id="lastChar">&larr;</button></div>
+                <div class="three columns"><button class="u-full-width" id="clearTwo">CE</button></div>
+                <div class="three columns"><button class="u-full-width" id="clear">C</button></div>
+                <div class="three columns"><button class="u-full-width white" id="number">+</button></div>
+            </div>
+            <div class="row">
+                <div class="three columns"><button class="u-full-width" id="number">1</button></div>
+                <div class="three columns"><button class="u-full-width" id="number">2</button></div>
+                <div class="three columns"><button class="u-full-width" id="number">3</button></div>
+                <div class="three columns"><button class="u-full-width white" id="number">-</button></div>
+            </div>
+            <div class="row">
+                <div class="three columns"><button class="u-full-width" id="number">4</button></div>
+                <div class="three columns"><button class="u-full-width" id="number">5</button></div>
+                <div class="three columns"><button class="u-full-width" id="number">6</button></div>
+                <div class="three columns"><button class="u-full-width white" id="number">*</button></div>
+            </div>
+            <div class="row">
+                <div class="three columns"><button class="u-full-width" id="number">7</button></div>
+                <div class="three columns"><button class="u-full-width" id="number">8</button></div>
+                <div class="three columns"><button class="u-full-width" id="number">9</button></div>
+                <div class="three columns"><button class="u-full-width white" id="number">/</button></div>
+            </div>
+            <div class="row">
+                <div class="three columns"><button class="u-full-width" id="number">0</button></div>
+                <div class="three columns"><button class="u-full-width" id="number">.</button></div>
+                <div class="three columns"><button class="u-full-width" id="number">&#8730;</button></div>
+                <div class="three columns"><button id="process" class="u-full-width white">=</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

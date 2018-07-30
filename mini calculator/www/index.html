@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="skeleton.css" >
+        <style>
+            .column, .columns {
+                width: 22%;
+                margin: 1.5%;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            h1{
+            font-size: 1.5em;
+            text-align: left;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        .u-full-width{
+            height: 60px;
+        }
+        ul li{
+            list-style: none;
+        }
+        .con{
+            background: #1e8caf;
+            height: 100vh;
+        }
+        button {
+            color: #fff;
+            background: #333;
+        }
+        #total{
+            text-align: right;
+        }
+        .holder {
+            padding: 20px;
+        }
+        .row.header1 {
+            padding: 20px 20px 0;
+            background: #333;
+        }
+        .white{
+            background: #fff;
+            color: #000;
+        }
+        .button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus{
+            color: #fff;
+        }
+        .white:hover{
+            color: #000;
+        }
+        @media only screen and (max-width: 550px){
+            .column, .columns {
+                width: 22%;
+                margin: 1.5%;
+            }
+            .button, button, input[type="submit"], input[type="reset"], input[type="button"]{
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                margin-top: 10px;
+            }
+            h1{
+                font-size: 2em;
+            }
+        }
+        
+        </style>
+    </head>
+    <body>
+        <div class="con">
+                <div class="row header1">
+                    <h1>Calculator </h1>
+                    <form action="" id="cal-form">
+                        <div>
+                            <input type="text" id="total" class="u-full-width" placeholder="0" onkeypress="return NumNum(event)">
+                        </div>
+                    </form>
+                </div>
+                <div class="holder">
+                    <div class="row">
+                        <div class="three columns"><button class="u-full-width" id="lastChar">&larr;</button></div>
+                        <div class="three columns"><button class="u-full-width" id="clearTwo">CE</button></div>
+                        <div class="three columns"><button class="u-full-width" id="clear">C</button></div>
+                        <div class="three columns"><button class="u-full-width white" id="number">+</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns"><button class="u-full-width" id="number">1</button></div>
+                        <div class="three columns"><button class="u-full-width" id="number">2</button></div>
+                        <div class="three columns"><button class="u-full-width" id="number">3</button></div>
+                        <div class="three columns"><button class="u-full-width white" id="number">-</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns"><button class="u-full-width" id="number">4</button></div>
+                        <div class="three columns"><button class="u-full-width" id="number">5</button></div>
+                        <div class="three columns"><button class="u-full-width" id="number">6</button></div>
+                        <div class="three columns"><button class="u-full-width white" id="number">*</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns"><button class="u-full-width" id="number">7</button></div>
+                        <div class="three columns"><button class="u-full-width" id="number">8</button></div>
+                        <div class="three columns"><button class="u-full-width" id="number">9</button></div>
+                        <div class="three columns"><button class="u-full-width white" id="number">/</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns"><button class="u-full-width" id="number">0</button></div>
+                        <div class="three columns"><button class="u-full-width" id="number">.</button></div>
+                        <div class="three columns"><button class="u-full-width" id="number">&#8730;</button></div>
+                        <div class="three columns"><button id="process" class="u-full-width white">=</button></div>
+                    </div>
+                </div>
+            </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
